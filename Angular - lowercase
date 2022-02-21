@@ -1,11 +1,10 @@
-#html
+#app.component.html
 
 <!DOCTYPE html>
 <html>
 
 <head>
 </head>
-<!-- The ng-app directive tells angular that the code below should be evaluated -->
 
 <body>
     <input [(ngModel)]="name" type="text"> {{name|lowercase }}
@@ -18,3 +17,14 @@
 export class AppComponent {
   public name="";
 }
+
+
+#app.module.ts
+
+import { FormsModule } from '@angular/forms';
+
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule
+  ],
