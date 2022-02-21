@@ -128,3 +128,8 @@ p b {
     text-transform: uppercase;
     font-size: 18px;
 }
+
+
+#In app.component.ts
+
+public active="";
