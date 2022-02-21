@@ -1,0 +1,20 @@
+#html
+
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+<!-- The ng-app directive tells angular that the code below should be evaluated -->
+
+<body>
+    <input [(ngModel)]="name" type="text"> {{name|lowercase }}
+</body>
+</html>
+
+
+#app.component.ts
+
+export class AppComponent {
+  public name="";
+}
