@@ -1,0 +1,54 @@
+#app.component.html
+
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+<!-- The ng-app directive tells angular that the code below should be evaluated -->
+
+<body>
+
+    <h2 [style.color]="titleColor"> My color is</h2>
+
+    <button (click)="onRed()">Red</button> <br>
+    <button (click)="onBlue()">Blue</button> <br>
+    <button (click)="onGreen()">Green</button> <br>
+    <button (click)="onDefalut()">Default color</button> <br>
+</body>
+
+</html>
+
+
+
+
+
+#app.component.ts
+
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+
+  public titleColor = "";
+
+  onRed(){
+    this.titleColor='red';
+  }
+
+  onBlue(){
+    this.titleColor='blue';
+  }
+
+  onGreen(){
+    this.titleColor='green';
+  }
+
+  onDefalut(){
+    this.titleColor='';
+  }
+}
