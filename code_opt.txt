@@ -1,0 +1,27 @@
+OUTPUT:
+
+left    a         right:  9
+left    b        right:  c+d
+left    e        right:  c+d
+left    f        right:  b+e
+left    r        right:  f
+intermediate Code
+a=9
+b=c+d
+e=c+d
+f=b+e
+r=f
+
+after dead code elimination
+b       =c+d
+e       =c+d
+f       =b+e
+r       =f
+eliminate common expression
+b       =c+d
+b       =c+d
+f       =b+b
+r       =f
+optimized codeb=c+d
+f=b+b
+r=f
